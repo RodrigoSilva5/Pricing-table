@@ -1,0 +1,359 @@
+/* coolors
+#60AFFF french sky blue
+#5941A9 plump purple
+#B2DBBF turquoise green
+#F0195A paradise pink 
+#06D6A0 caribean green
+
+
+fonts
+    font-family: 'Open Sans', sans-serif;
+
+    font-family: 'Roboto', sans-serif;
+
+*/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&family=Roboto:wght@500&display=swap');        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root{
+            --firstcolor:#60AFFF;
+            --secondcolor: #5941A9;
+            --thircolor:#B2DBBF;
+
+        }
+        body{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap !important;
+            background-color: gray;
+            /* background: radial-gradient(circle, rgba(82,110,254,0.8981793400954132) 0%, rgba(255,255,255,1) 100%);      */
+        }
+        main{
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 80%;
+            display: flex;
+            flex-wrap: wrap !important;
+            z-index: 3;
+        }
+
+        header{
+            width: 100vw;
+            min-width: 50vw;
+            height: 180px;
+            flex-direction: column;
+            z-index: 3;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            justify-content: center;
+            flex: 100%;
+            overflow: hidden;
+        }
+        .wave-bottom{
+            align-self: flex-end;
+            margin-bottom: -200px;
+        }
+        .wave-top{
+            align-self: flex-start;
+            z-index: 3;
+        }
+        /* toggle-switch */
+        .container-toggle{
+            margin-top: 70px;
+            width: 300px;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .container-toggle > h2, .container-toggle label{
+            flex: 100%;
+        }
+        .switch-button{
+            width: 100px;
+            height: 50px;
+            display: flex;
+            z-index: 4;
+            display: inline-block;
+            cursor: pointer;
+        }
+        #switch-toggle{
+            display: none;
+        }
+        .toggle_fill{
+            position: relative;
+            box-shadow: 19px 14px 18px 0px rgba(0,0,0,0.07) inset;
+            -webkit-box-shadow: 19px 14px 18px 0px rgba(0,0,0,0.07) inset;
+            -moz-box-shadow: 19px 14px 18px 0px rgba(0,0,0,0.07) inset;
+            border: 3px solid #000;
+            background-color: white;
+            width: 100px;
+            height: 50px;
+            border-radius: 20%/50%;
+            transition: background 0.8s ;
+        }
+        .toggle_fill::after{
+            border: 2px solid red;
+            position: absolute;
+            content: "";
+            width: 45px;
+            height: 45px;
+            background-color: black;
+            border-radius: 50%;
+            transition: transform 0.5s;
+        }
+        /* checked */
+        #switch-toggle:checked ~ .toggle_fill{
+            background-color: white;
+        
+
+
+        }
+        #switch-toggle:checked ~ .toggle_fill::after{
+            transform: translateX(50px);
+        }
+        /* animation when hover tables */
+        .price-tables-style:hover{
+            transform: scale(1.1);
+            transition: all  0.3s linear;
+            color: black;
+
+        }
+
+
+@media only screen and (min-width: 768px) {
+    /* screen with width big 768px */
+            #container-pricing-table{
+                /* border: 1px solid #000; */
+                min-width: 1152px;
+                min-height: 619px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 60vw;
+                height: 65vh;
+              
+            }
+            .price-tables{
+                display: flex;
+                width: 350px;
+                height: 100px;
+                flex-basis: 70%;
+            }
+            .price-tables-style{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                /* stylized table */
+                background-color: white;
+                border-radius: 5%;
+                box-shadow: 1px 3px 5px black;
+                z-index: 2;
+                
+            }
+            /* box shadows */
+            .table-1{
+                box-shadow: 22px 16px 47px -16px rgba(255,0,0,0.64);
+                -webkit-box-shadow: 22px 16px 47px -16px rgba(255,0,0,0.64);
+                -moz-box-shadow: 22px 16px 47px -16px rgba(255,0,0,0.64);
+            }
+            .table-2 {box-shadow: 22px 16px 47px -16px rgba(6,214,160,0.99);
+                -webkit-box-shadow: 22px 16px 47px -16px rgba(6,214,160,0.99);
+                -moz-box-shadow: 22px 16px 47px -16px rgba(6,214,160,0.99);
+            }
+            .table-3{
+                box-shadow: 22px 16px 47px -16px rgba(89,65,169,0.99);
+                -webkit-box-shadow: 22px 16px 47px -16px rgba(89,65,169,0.99);
+                -moz-box-shadow: 22px 16px 47px -16px rgba(89,65,169,0.99);
+            }
+
+            .price-tables-style > h1{
+                color: white;
+                margin-top: -170px;
+                font-family: 'Roboto', sans-serif;
+            }
+            .price-tables-style > h2{
+                margin-top: -10px;
+                color: white;
+            }
+
+            .price-table-main > .price-tables-style > h2{
+                margin-top: -80px;
+                color: white;
+            }
+            .price-tables-style p{
+                text-align: center;
+                margin-top: 150px;
+                font-family: 'Roboto', sans-serif;
+            }
+            /* svgs in tables */
+            #svgs-1-table, #svgs-2-table, #svgs-3-table{
+                width: 100%;
+                height: 30vh;
+            }
+            /* button */
+            .price-tables-style > a{
+                width: 150px;
+                height: 25px;
+                display: flex;
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                text-decoration: none;
+            }
+            .button{
+                background-color: white;
+                border-radius: 30px;
+                margin-top: 3px;
+                color: black;
+                width: 160px;
+                height: 60px;
+                font-size: 1em;
+                font-family: 'Roboto', sans-serif;
+            }
+            
+            .price-table-main{
+                flex: 70%
+            }
+
+
+}
+@media only screen and (min-width: 0px ) and (max-width:768px)  {
+    /* screen with width above 768px */
+    main{
+        overflow: hidden;
+        flex-direction: column;
+        min-width: 100vw;
+        /* min-height: 100vh; */
+        flex-wrap: wrap;
+        height: 2000px;
+    }
+    #container-pricing-table{
+        /* border: 1px solid #000; */
+        min-width: 100vw;
+        /* min-height: 1000px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 60vw;
+        height: 100%;
+        overflow: hidden;
+        justify-content: space-between;
+      
+    }
+    .price-tables{
+        display: flex;
+        width: 350px;
+        height: 300px;
+        flex-basis: 70%;
+        flex-wrap: wrap;
+    }
+    .price-tables-style{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        width: 100%;
+        height: 498px;
+        /* stylized table */
+        background-color: white;
+        border-radius: 5%;
+        box-shadow: 1px 3px 5px black;
+        z-index: 2;
+        
+    }
+    /* box shadows */
+    .table-1{
+        box-shadow: 22px 16px 47px -16px rgba(255,0,0,0.64);
+        -webkit-box-shadow: 22px 16px 47px -16px rgba(255,0,0,0.64);
+        -moz-box-shadow: 22px 16px 47px -16px rgba(255,0,0,0.64);
+    }
+    .table-2 {
+        box-shadow: 22px 16px 47px -16px rgba(6,214,160,0.99);
+        -webkit-box-shadow: 22px 16px 47px -16px rgba(6,214,160,0.99);
+        -moz-box-shadow: 22px 16px 47px -16px rgba(6,214,160,0.99);
+    }
+    .table-3{
+        box-shadow: 22px 16px 47px -16px rgba(89,65,169,0.99);
+        -webkit-box-shadow: 22px 16px 47px -16px rgba(89,65,169,0.99);
+        -moz-box-shadow: 22px 16px 47px -16px rgba(89,65,169,0.99);
+    }
+
+    .price-tables-style > h1{
+        color: white;
+        margin-top: -170px;
+        font-family: 'Roboto', sans-serif;
+    }
+    .price-tables-style > h2{
+        margin-top: -10px;
+        color: white;
+    }
+    
+    .price-table-main > .price-tables-style > h2{
+        color: white;
+    }
+    .price-tables-style p{
+        text-align: center;
+        margin-top: 150px;
+        font-family: 'Roboto', sans-serif;
+    }
+    /* svgs in tables */
+    #svgs-1-table, #svgs-2-table, #svgs-3-table{
+        width: 100%;
+        height: 30vh;
+    }
+    /* button */
+    .price-tables-style > a{
+        width: 150px;
+        height: 25px;
+        display: flex;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+    }
+    .button{
+        background-color: white;
+        border-radius: 30px;
+        margin-top: 3px;
+        color: black;
+        width: 160px;
+        height: 60px;
+        font-size: 1em;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .price-table-main{
+        flex: 70%
+    }
+    
+}
+/* proximos passos 
+trocar price-table-main de id para class* 
+estilizar o butao *
+fazer shadow box de cada cor para cada caixa *
+estilizar o botao que troca de mes para ano *
+criar animação quando passa o mouse em cima / criar o script que adiciona e tira a classe* 
+criar script que troca os valores de mes para ano*
+ajustar versão mobile
+checar bugs 
+adicionar um footer ?
+upload no github
+
+
+https://dribbble.com/shots/5097615-Pricing-Table
+https://dribbble.com/shots/9324960-Modern-Pricing-Plans
+*/
